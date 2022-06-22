@@ -1,0 +1,136 @@
+/* Estilos Generales */
+
+
+/* Import */
+@import "reseteo";
+@import "responsive";
+
+
+/* Variables */
+
+$bacRosa: #f0b6d7;
+$bordeColor: #f288c6;
+
+
+
+
+
+header {
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.carrito {
+    margin: 10px;
+    padding: 10px;
+}
+
+.encabezado {
+    text-align: center;
+    background-color: rgb(226, 192, 226);
+    color: #4a253a;
+    font-size: 15px;      
+}
+
+
+/* Anidamiento */
+.menuHorizontal {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+   > li {
+        &:hover {
+            background-color :$bacRosa;
+        }
+        >a {
+            display: block;
+        padding: 10px 15px;
+        color: rgb(6, 4, 6);
+        text-decoration: none;
+        }
+    }   
+}
+
+.menuVertical {
+    position: absolute;
+    color: rgb(143, 37, 37); 
+    display: none;
+    list-style: none;
+    width: 150px;
+    padding: 5px;
+    background-color: rgb(208, 133, 184);
+
+    li {
+         &:hover {
+            color: #090507;
+            background-color: $bacRosa;
+            .menuVertical{
+                display: block;
+
+            }
+        } 
+        
+    }
+
+}
+li {
+    font-size: 18px;
+}
+
+.menuFlexible {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:stretch;
+    /*cursos: pointer;*/ 
+}
+
+.slide {
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    align-items:center;
+}
+
+.centrar {
+    text-align: center;
+    background-color: #f2d9e7;
+    border:$bordeColor dotted 2px;
+    font-size: 250%;
+    color: #e06baf;
+    padding: 2vh;
+    margin: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    text-align:center;
+    align-items:center;
+    justify-content:center;
+}
+
+/*Tienda */
+
+.menu_tienda {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 5px;
+}
+
+.galeria {
+    img {
+        width: 100%;
+        height: 80vh ;
+    }
+}
+
+
